@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    {%code%} {%title%}
+    {%script
+        var testCode = [1, 2, 3];
+        for(var i=0, ln=testCode.length; i<ln; i++) {
+            alert(i);
+        }
+    %}
+    {%css
+        {%code
+            $color = '#235';
+        %}
+        {%var a
+
+        %}
+        .mail {
+            border: 1px;
+            color:{%getv $color %};
+        }
+    %}
+
+    {%link demo.css %}
+    {%link demo.css %}
+    {%link demo.css %}
+    <link rel="stylesheet" type="text/css" href="{%url demo.css %}">
+</head>
+<body>
+    {%for {%cond $i=0; $i<10; $i++ %}
+        <div>html代码</div>
+        <div>取值测试：{%getv $i %}</div>
+        <div>html代码</div>
+
+        {%if {%cond $i=0 %}
+            <div>在if中输出的代码</div>
+            <div>在if中输出的代码</div>
+        %}
+        {%elseif {%cond $i=1 %}
+            <div>值为：{%getv $i %}</div>
+            <div>在if分支中输出的代码</div>
+        %}
+
+        {%code
+            $phpCode = array('1', 'test', 'hello');
+            $ln = count($phpCode);
+            for($i=0; $i<$ln; $i++) {
+                echo $phpCode;
+            }
+        %}
+    %}
+    <div>html代码</div>
+    {%block
+        <div>块结构</div>
+    %}
+    <div>html代码</div>
+    {%code
+        $phpCode = array('1', 'test', 'hello');
+        $ln = count($phpCode);
+        for($i=0; $i<$ln; $i++) {
+        echo $phpCode;
+        }
+    %}
+    <div>html代码{%echo 2222%}</div>
+    <div>html代码</div>
+</body>
+</html>

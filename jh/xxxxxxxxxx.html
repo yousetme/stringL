@@ -1,0 +1,19 @@
+
+
+<option value="0">请选择</option>
+{%for {%cond var i=0,ln=data.length; i<ln; i++ %}
+<option value="{%getv data[i].code %}">{%getv data[i].name %}</option>
+%}
+
+
+<option value="0">请选择</option>
+{%for {%cond var i in data %}
+<option value="{%getv i %}" >{%getv data[i] %}</option>
+%}
+
+
+{%for {%cond var i in data %}
+<em class="wrappedBlock">
+    <input type="checkbox" value="{%getv i %}" pname="{%getv data[i] %}" class="checkbox"> &nbsp;{%getv data[i] %}
+</em>
+%}

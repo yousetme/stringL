@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+    {%for {%cond var $i=0; $i<10; $i++ %}
+        <div>html代码</div>
+        <div>取值测试：{%getv $i %}</div>
+        <div>html代码</div>
+
+        {%if {%cond $i==0 %}
+            <div>在if中输出的代码</div>
+            <div>在if中输出的代码</div>
+        %}
+        {%elseif {%cond $i==1 %}
+            <div>值为：{%getv $i %}</div>
+            <div>在if分支中输出的代码</div>
+        %}
+
+    %}
+    <div>html代码</div>
+    {%block
+        <div>块结构</div>
+    %}
+    <div>html代码</div>
+    <div>html代码{%echo 2222%}</div>
+    <div>html代码</div>
+</body>
+</html>
+{%code
+    alert($out);
+%}

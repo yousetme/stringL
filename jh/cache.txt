@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html>
+<head lang="en">
+    <script>
+        var testCode = [1, 2, 3];
+        for(var i=0, ln=testCode.length; i<ln; i++) {
+            alert(i);
+        }
+    </script>
+
+     
+    <script>
+        var testCode = [1, 2, 3];
+        for(var i=0, ln=testCode.length; i<ln; i++) {
+        alert(i);
+        }
+    </script>
+             
+    <script>
+        var testCode = [1, 2, 3];
+        for(var i=0, ln=testCode.length; i<ln; i++) {
+        alert(i);
+        }
+    </script>
+            rrr
+
+</head>
+<body>
+    <?php for( $i=0; $i<10; $i++ ) { ?> 
+        <div>html代码</div>
+        <div>取值测试：<?php echo  $i ; ?></div>
+        <div>html代码</div>
+
+        <?php if( $i=0 ) { ?> 
+            <div>在if中输出的代码</div>
+            <div>在if中输出的代码</div>
+        <?php } 
+        else if( $i=1 ) { ?> 
+            <div>值为：<?php echo  $i ; ?></div>
+            <div>在if分支中输出的代码</div>
+        <?php } ?>
+
+        <?php
+            $phpCode = array('1', 'test', 'hello');
+            $ln = count($phpCode);
+            for($i=0; $i<$ln; $i++) {
+                echo $phpCode;
+            }
+        ?>
+    <?php } ?>
+    <div>html代码</div>
+    
+        <div>块结构</div>
+    
+    <div>html代码</div>
+    <?php
+        $phpCode = array('1', 'test', 'hello');
+        $ln = count($phpCode);
+        for($i=0; $i<$ln; $i++) {
+        echo $phpCode;
+        }
+    ?>
+    <div>html代码echo</div>
+    <div>html代码</div>
+</body>
+</html>

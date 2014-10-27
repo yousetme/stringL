@@ -1,0 +1,9 @@
+<option value="0">请选择</option>
+{%for {%cond var i in data %}
+    {%if {%cond select==i %}
+        <option value="{%getv i %}" selected="selected">{%getv data[i] %}</option>
+    %}
+    {%else
+        <option value="{%getv i %}">{%getv data[i] %}</option>
+    %}
+%}
